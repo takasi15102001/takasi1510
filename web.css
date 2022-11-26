@@ -1,0 +1,285 @@
+* {
+    font-family: Mukta, serif;
+}
+body{
+    background-image:url(./img/123.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+.custom-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 16px;
+}
+
+#mainMenu li {
+    display: block;
+    width: fit-content;
+    float: left;
+    margin-left: 6px;
+}
+
+#mainMenu a {
+    display: block;
+    padding: 6px;
+    margin-top:-31px;
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 25px;
+    line-height: 140%;
+    color: rgb(222, 58, 189);
+}
+
+#mainMenu a:hover {
+    color: #fff;
+}
+
+.content {
+    text-decoration: underline;
+    text-align: center;
+    font-size: 16px;
+
+}
+
+.textLogo {
+    font-family: Mukta, serif;
+    text-align: center;
+    font-size: 35px;
+    line-height: 20px;
+    margin-top: 12px;
+    color: #04AA6D;
+}
+
+.container-search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.srch {
+    width: 200px;
+    height: 36px;
+    border-radius: 15px;
+    margin-top: -30px;
+    border-color: rgb(63, 123, 103);
+    padding: 12px 16px;
+    border: 0;
+}
+
+.btn {
+    padding: 6px 12px;
+    margin-top: -25px;
+    background-color: brown;
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    color: blue;
+    background-color: rgb(14, 119, 146);
+}
+
+.content-one {
+    width: 100%;
+    display: flex;
+    flex: 1;
+    justify-content:space-around;
+    align-items: center;
+}
+.sub-content-one{
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+.sub-content-two {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    text-align: center;
+    margin-top: -50px;
+    font-size: 35px;
+    line-height: 200%;
+    font-weight: bold;
+    background:linear-gradient(to right, rgb(25,120,76)30%, rgb(100,76,156)60%);
+   -webkit-background-clip: text;
+   color: transparent;
+}
+.sub-title {
+    text-align: center;
+    background:linear-gradient(to left, rgb(25,120,76), rgb(100,76,156));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 28px;
+    font-family:Cambria, Cochin;
+    line-height: 200%;
+}
+.btn-join {
+    background-color: bisque;
+    padding: 6px 24px;
+    border-color: rgb(46, 112, 35);
+    border-radius: 10px;
+    text-align: center;
+    width: 120px;
+    font-size: 18px;
+
+}
+.btn-join:hover ,.btn-join a:hover{
+    background-color: #ff7200;
+    color: #fff;
+}
+.btn-join > a {
+    text-decoration: none;
+}
+.butn-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Full-width input fields */
+.input-email, .input-password {
+    width: 50%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 12px;
+    border: none;
+    background: #f1f1f1;
+    margin-bottom: 15px;
+    border: 2px solid #986d4a;
+    
+  }
+  .txt{
+    text-align: center;
+    margin-left: 182px;
+    color: #0683dc;
+  }
+  .tx{
+    color: #8461e5;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: rgb(154, 94, 94);
+    outline: none;
+  }
+  
+  hr {
+    border: 2px solid #5a3636;
+    margin-bottom: 25px;
+  }
+  
+  label {
+    font-size: 24px;
+    color: black;
+    font-weight: 500;
+  }
+  /* Set a style for all buttons */
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  
+  button:hover {
+    opacity:1;
+  }
+   
+
+  .container {
+    padding: 16px;
+  }
+
+  .clearfix {
+    display: flex;
+    justify-content: center;
+    
+  }
+  .signupbtn{
+    width: 130px;
+    height: 50px;
+    border-radius: 15px;
+  }
+  .signupbtn:hover{
+    background-color: #ff7200;
+  }
+  .content-one-1{
+    display: flex;
+    margin:120px;
+  }
+  .sub-content-two-1{
+    margin-top: -160px;
+    margin-left: 20px;
+    color: #fff;
+    font-size: 25px;
+  }
+  .two{
+    width: 400px;
+    min-height: 90vh;
+  }
+  button{
+    border-radius: 15px;
+    background-color: rgb(30, 25, 25);
+    color: #fff;
+    padding: 4px 22px;
+   font-family: 'Franklin Gothic Medium';
+  }
+#btn4-down, #btn3-down, #btn2-down{
+  font-size: 18px !important;
+  padding: 9px 14px;
+}
+#btn1-up, #btn2-up, #btn3-up{
+  font-size: 18px;
+  padding: 9px 26px;
+}
+#btn1-up:hover, #btn2-up:hover, #btn3-up:hover, #btn4-down:hover, #btn3-down:hover, #btn2-down:hover{
+  background-color: #ff7200;
+}
+#btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover, #btn-open:hover, #btn-close:hover{
+  background-color: #ff7200;
+}
+.list-btn-1{
+    margin: 0 auto;
+}
+.list-btn{
+  margin: 0 auto;
+}
+.text-1{
+  position: absolute;
+  left:615px;
+  top:441px;
+  color: rgb(34, 27, 27);
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium';
+}
+.text-2{
+  position: absolute;
+  left: 615px;
+  top:503px;
+  color: rgb(34, 27, 27);
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium';
+}
+.text-3{
+  position: absolute;
+  left: 615px;
+  top:565px;
+  color: rgb(34, 27, 27);
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium';
+}
+.text-4{
+  position: absolute;
+  left:615px;
+  top:627px;
+  color: rgb(34, 27, 27);
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium';
+}

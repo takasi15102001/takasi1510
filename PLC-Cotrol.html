@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLC Control</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="./web.css">
+        <script
+            src="https://code.jquery.com/jquery-3.6.1.js"
+            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+            crossorigin="anonymous">
+    </script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.js"
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="custom-container">
+            <div class="main">
+                <div>
+                    <img src="https://ahaslides.com/wp-content/uploads/2021/06/www.png" alt="Đây là ảnh logo"
+                        width="126px" height="123px" style="margin-left: 45px;">
+                </div>
+                <p class="textLogo">Đồ án môn học</span><Br>
+            </div>
+            <nav class="menu">
+                <ul id="mainMenu">
+                    <li><a href="./profile.html" class="content"> <ion-icon name="people-outline"></ion-icon>  Thành viên nhóm 7</a></li>
+                    <li><a href="#" class="content"><ion-icon name="caret-forward-circle-outline"></ion-icon>  Video mô phỏng</a></li>
+                    <li><a href="./index.html" class="content"> <ion-icon name="people-outline"></ion-icon> Trang chủ</a></li>
+                </ul>
+            </nav>
+        </div>
+     <div class="content-one-1">
+        <div class="sub-content-one-1">
+            <h1 class="title">Đề tài: Thang máy 4 tầng</h1>
+            <p class="sub-title">
+                <strong>Thiết kế</strong> giao diện giám sát hệ thống WinCC<br />
+                Viết chương trình điều khiển hệ thống trên <strong> TIA Portal</strong><br />
+                <strong>Thiết kế</strong> giao diện điều khiển giám sát từ xa bằng <strong>Web Server</strong>
+            </p>
+        </div>
+        <div class="sub-content-two-1">
+            <div class="container-1 mt-3">
+                <h2>Đề tài: Thang máy</h2>
+                <p>Thang máy sử dụng bộ điều khiển logic khả trình PLC<br> Để điều khiển<br> Kết hợp ứng dụng Web Server giám sát điều khiển</p>
+                <div class="d-inline-flex  bg-secondary text-white text-center"> 
+                  <div class="two bg-info" >Nút nhấn
+                    <div class="two1" style="width: 100%; min-height: 45vh;background-color: #999;">
+                        <span>Ngoài Cabin</span>
+                        <div class="list-btn" style="margin-top: 27px;border:1.5px solide white; background-color: blueviolet;width: 170px;height: 250px;border-radius: 10px;padding-top: 4px;">
+                            <div>
+                                <p class="text-1">Tầng 1</p>
+                                <button id="btn1-up" type="submit">up</button>
+                            </div>
+                            <div>
+                                <span class="text-2">Tầng 2</span>
+                                <button id="btn2-up" type="submit">up</button>
+                                <button id="btn2-down" type="submit">down</button>
+                            </div>
+                            <div>
+                                <span class="text-3">Tầng 3</span>
+                                <button id="btn3-up" type="submit">up</button>
+                                <button id="btn3-down" type="submit">down</button></div>
+                            <div>
+                                <span class="text-4">Tầng 4</span>
+                                <button id="btn4-down" type="submit">down</button>
+                            </div>
+                        </div>       
+                    </div>
+                    <div class="two2"  style="width:100%; min-height: 45vh;background-color: rgb(238, 181, 181);">
+                        <span>Trong Cabin</span>
+                        <div class="list-btn-1" style="margin-top: 50px;border:1.5px solide white; background-color: blueviolet;width: 150px;height: 200px;border-radius: 10px;padding-top: 7px;">
+                            <div>
+                                <button id="btn1" type="submit">1</button>
+                                <button id="btn2" type="submit">2</button>
+                            </div>
+                            <div>
+                                <button id="btn3" type="submit">3</button>
+                                <button id="btn4" type="submit">4</button>
+                            </div>
+                            <div>
+                            <button id="btn-open" type="submit" style="border-radius: 50%;">></button>
+                            <button id="btn-close" type="submit" style="border-radius: 50%;">></button>
+                            </div>
+                        </div>
+                       
+                    </div>
+                  </div>
+                  <div class="two bg-warning">Động cơ
+                    <div class="two2" style="width: 100%; min-height: 45vh;background-color: rgb(3, 72, 90);">
+                        <span>Động cơ kéo hạ Cabin</span>
+                        <img id="state1" src="https://thumbs.dreamstime.com/z/motor-pump-irrigation-icon-outline-style-motor-pump-irrigation-icon-outline-motor-pump-irrigation-vector-icon-web-design-135519421.jpg" alt="" class="rounded-circle" width="200px" min-height="30vh" style="margin-top: 35px;">
+                    </div>
+                    <div class="two3"  style="width: 100%; min-height: 45vh;background-color: rgb(115, 167, 181);">
+                        <span>Động cơ đóng mở của Cabin</span>
+                        <img id="state2" src="https://thumbs.dreamstime.com/z/motor-pump-irrigation-icon-outline-style-motor-pump-irrigation-icon-outline-motor-pump-irrigation-vector-icon-web-design-135519421.jpg" alt="" class="rounded-circle" width="200px" min-height="30vh" style="margin-top: 35px;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="./web.js"></script>
+</html>
