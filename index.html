@@ -4,7 +4,7 @@
 <head>
     <link rel="icon"
         href="https://static.vecteezy.com/system/resources/previews/000/425/951/original/vector-web-search-icon.jpg"
-        type="ipg/icon">
+        type="ipg/ico">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,10 +28,14 @@
                 <p class="textLogo">Đồ án môn học</span><Br>
             </div>
             <nav class="menu">
-                <ul id="mainMenu">
-                    <li><a href="./profile.html" class="content"><ion-icon name="people-outline"></ion-icon> Thành viên nhóm 7</a></li>
-                    <li><a href="#" class="content"><ion-icon name="caret-forward-circle-outline"></ion-icon>  Video mô phỏng</a></li>
-                    <li><a href="./PLC-Cotrol.html" class="content"><ion-icon name="save-outline"></ion-icon> PLC thang máy</a></li>
+                <ul class="mainMenu">
+                    <li><a href="./profile.html" class="content"><ion-icon name="people-outline"></ion-icon> Thành viên
+                            nhóm 7</a></li>
+                    <li><a href="#" class="content"><ion-icon name="caret-forward-circle-outline"></ion-icon> Video mô
+                            phỏng</a></li>
+                    <li><a style="cursor: pointer;" id="plc" class="content"><ion-icon name="save-outline"></ion-icon>
+                            PLC thang
+                            máy</a></li>
                 </ul>
             </nav>
             <div>
@@ -46,7 +50,7 @@
                 <div class="sub-content-one">
                     <h1 class="title">Đề tài: Thang máy 4 tầng</h1>
                     <p class="sub-title">
-                        <strong>Thiết kế</strong> giao diện giám sát hệ thống WinCC <br/>
+                        <strong>Thiết kế</strong> giao diện giám sát hệ thống WinCC <br />
                         Viết chương trình điều khiển hệ thống trên <strong> TIA Portal</strong><br />
                         <strong>Thiết kế</strong> giao diện điều khiển giám sát từ xa bằng <strong>Web Server</strong>
                     </p>
@@ -55,22 +59,34 @@
                     </div>
                 </div>
                 <div class="sub-content-two">
-                    <form
+                    <form id="signUpForm" method="post"
                         style="border:1px solid #ccc;border-radius: 10px;border: 2px; background-image: url(https://i.pinimg.com/originals/4b/32/3b/4b323b09af547c416de7658a561492a6.jpg); background-size: cover">
                         <div class="container">
                             <h1 style="text-align: center">Login</h1>
-                           
-                            <label class="txt" for="email">Email:</label>
-                            <input type="text" placeholder="Enter Email" name="email" required class="input-email">
 
-                            <label class="txt" for="psw">Password:</label>
-                            <input type="password" placeholder="Enter Password" name="psw" required
-                                class="input-password">
+
+                            <div>
+                                <label class="txt" for="email">Email:</label>
+                                <input type="text" id="email" placeholder="Enter Email" name="email"
+                                    class="input-email">
+
+                                <p style="color: red; margin-left: 182px"></p>
+                            </div>
+
+
+                            <div>
+                                <label class="txt" for="psw">Password:</label>
+                                <input type="password" id="password" placeholder="Enter Password" name="psw"
+                                    class="input-password">
+
+                                <p style="color: red; margin-left: 182px;"></p>
+                            </div>
+
 
                             <label>
                                 <input class="txt" type="checkbox" checked="checked" name="remember"
                                     style="margin-bottom:15px; width: 16px; height: 16px;">
-                               <strong class="tx">Remember me</strong> 
+                                <strong class="tx">Remember me</strong>
                             </label>
                             <div class="clearfix">
                                 <button type="submit" class="signupbtn">Sign Up</button>
@@ -81,6 +97,7 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="./signUp.js"></script>
 </body>
 
 </html>

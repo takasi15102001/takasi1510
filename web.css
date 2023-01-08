@@ -1,8 +1,10 @@
 * {
     font-family: Mukta, serif;
+    margin: 0;
+    padding: 0;
 }
 body{
-    background-image:url(https://th.bing.com/th/id/OIP.3tCCp1pgXZTQw7lMNXapTQHaEK?pid=ImgDet&rs=1);
+    background-image:url(./imgs/123.jpg);
     background-position: center;
     background-size: cover;
     min-height: 100vh;
@@ -14,27 +16,67 @@ body{
     padding: 0px 16px;
 }
 
-#mainMenu li {
-    display: block;
-    width: fit-content;
-    float: left;
-    margin-left: 6px;
+.nav{
+  display: flex;
+  justify-content: center;
+}
+.nav-item  {
+  width: 200px;
+  height:100%;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  margin-top: 4px;
+  margin-left: 15px;
+  border-radius: 40px;
+  background: #c8b45c;
+
 }
 
-#mainMenu a {
-    display: block;
-    padding: 6px;
-    margin-top:-31px;
-    margin-left: 30px;
-    text-decoration: none;
-    font-size: 25px;
-    line-height: 140%;
-    color: rgb(222, 58, 189);
+.nav-item a{
+  padding-bottom: 5px;
+  color: #0a4b59;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: transparent;
+
+}
+.mainMenu li {
+  display: block;
+  width: fit-content;
+  float: left;
+  margin-left: 6px;
 }
 
-#mainMenu a:hover {
-    color: #fff;
+.mainMenu a {
+  display: block;
+  padding: 6px;
+  margin-top:-31px;
+  margin-left: 25px;
+  text-decoration: none;
+  font-size: 25px;
+  line-height: 100%;
+  color: rgb(18, 18, 188);
+  font-family: 'Rubik', sans-serif;
 }
+.mainMenu li  a{
+  width: 270px;
+  height: 40px;
+  border-radius: 40px;
+  padding-bottom: 40px;
+  margin-top: 3px;
+  background: #fff;
+
+}
+
+.mainMenu a:hover{
+  color: #ff7200;
+}
+
+
+.nav-item a:hover{
+    color: rgb(227, 79, 25);
+}
+
 
 .content {
     text-decoration: underline;
@@ -60,9 +102,8 @@ body{
 
 .srch {
     width: 200px;
-    height: 36px;
+    height: 40px;
     border-radius: 15px;
-    margin-top: -30px;
     border-color: rgb(63, 123, 103);
     padding: 12px 16px;
     border: 0;
@@ -70,7 +111,6 @@ body{
 
 .btn {
     padding: 6px 12px;
-    margin-top: -25px;
     background-color: brown;
     color: aliceblue;
     border-radius: 10px;
@@ -156,20 +196,15 @@ body{
   .txt{
     text-align: center;
     margin-left: 182px;
-    color: #0683dc;
+    color: rgb(138 41 186);
   }
   .tx{
-    color: #8461e5;
+    color: rgb(254 179 222);
   }
   
   input[type=text]:focus, input[type=password]:focus {
     background-color: rgb(154, 94, 94);
     outline: none;
-  }
-  
-  hr {
-    border: 2px solid #5a3636;
-    margin-bottom: 25px;
   }
   
   label {
@@ -251,35 +286,15 @@ body{
 .list-btn{
   margin: 0 auto;
 }
-.text-1{
-  position: absolute;
-  left:615px;
-  top:441px;
-  color: rgb(34, 27, 27);
-  font-weight: bold;
-  font-family: 'Franklin Gothic Medium';
+
+.list-text{
+  width: 120px;
+  height: 150px;
+  margin-left:5px ;
+  padding-top: 45px;
 }
-.text-2{
-  position: absolute;
-  left: 615px;
-  top:503px;
-  color: rgb(34, 27, 27);
-  font-weight: bold;
-  font-family: 'Franklin Gothic Medium';
+br{
+  margin-top: 15px;
 }
-.text-3{
-  position: absolute;
-  left: 615px;
-  top:565px;
-  color: rgb(34, 27, 27);
-  font-weight: bold;
-  font-family: 'Franklin Gothic Medium';
-}
-.text-4{
-  position: absolute;
-  left:615px;
-  top:627px;
-  color: rgb(34, 27, 27);
-  font-weight: bold;
-  font-family: 'Franklin Gothic Medium';
-}
+
+

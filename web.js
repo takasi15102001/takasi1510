@@ -1,46 +1,216 @@
-var Q0_0;
-var Q0_1;
-var Q0_2;
-var Q0_3;
 
+$(document).ready(function () {
+    $.ajaxSetup({ cache: false });
+    setInterval(function () {
+        $.getJSON("data.html", function (result) {
+            console.log(result);
+            let result0 = +result["Q0_0"];
+            let result1 = +result["Q0_1"];
+            let result2 = +result["Q0_2"];
+            let result3 = +result["Q0_3"];
 
-$(document).ready( function () {
-    $.ajaxSetup({cache : false});
-    setInterval( function () {
-        $.getJSON("data.html", function(result) {
-            Q0_0 = result["q0_0"];
-            Q0_1 = result["q0_1"];
-            Q0_2 = result["q0_2"];
-            Q0_3 = result["q0_3"];
+            console.log({ result0, result1, result2, result3 });
 
-            if(Q0_0 == 1 ){
-                document.getElementById("state1").src = './img/motor.jpg';
+            let image1 = document.getElementById("image_1");
+            let image2 = document.getElementById("image_2");
+
+            if (result0 == 1 ) {
+                console.log(1);
+                image1.setAttribute("src", "./imgs/pupm_fwd.png");
             }
             else {
-                document.getElementById("state1"). src = 'https://thumbs.dreamstime.com/z/motor-pump-irrigation-icon-outline-style-motor-pump-irrigation-icon-outline-motor-pump-irrigation-vector-icon-web-design-135519421.jpg';
+                image1.setAttribute("src","./imgs/pupm_off.png");
             }
 
-            if(Q0_1 == 1 ){
-                document.getElementById("state1").src = 'https://th.bing.com/th?q=Drive+Motor+Icon&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-WW&cc=VN&setlang=vi&adlt=moderate&t=1&mw=247';
-            }
-            else {
-                document.getElementById("state1"). src = 'https://thumbs.dreamstime.com/z/motor-pump-irrigation-icon-outline-style-motor-pump-irrigation-icon-outline-motor-pump-irrigation-vector-icon-web-design-135519421.jpg';
+            if ( result1 == 1) {
+                console.log(2);
+                image1.setAttribute("src", "./imgs/pupm_rev.png");
             }
 
-            if(Q0_2 == 1 ){
-                document.getElementById("state2").src = 'https://th.bing.com/th?q=AC+Motor+Icons&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-WW&cc=VN&setlang=vi&adlt=moderate&t=1&mw=247';
-            }
-            else {
-                document.getElementById("state2"). src = 'https://thumbs.dreamstime.com/z/motor-pump-irrigation-icon-outline-style-motor-pump-irrigation-icon-outline-motor-pump-irrigation-vector-icon-web-design-135519421.jpg';
+            else{
+                image2.setAttribute("src","./imgs/pupm_off.png");
             }
 
-            if(Q0_3 == 1 ){
-                document.getElementById("state2").src = 'https://th.bing.com/th?q=Drive+Motor+Icon&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-WW&cc=VN&setlang=vi&adlt=moderate&t=1&mw=247';
+            if (result2 == 1 ) {
+                console.log(3);
+                image2.setAttribute("src", "./imgs/pupm_fwd.png");
             }
-            else {
-                document.getElementById("state2"). src = 'https://thumbs.dreamstime.com/z/motor-pump-irrigation-icon-outline-style-motor-pump-irrigation-icon-outline-motor-pump-irrigation-vector-icon-web-design-135519421.jpg';
+            if (result3 == 1) {
+                console.log(4);
+                image2.setAttribute("src", "./imgs/pupm_rev.png");
             }
+
+
+
         });
-    }),500;
-
+    }, 1000);
 });
+
+
+function set_u1() {
+    ulr = 'data.html';
+    name = '"T1_Up"';
+    sdata = escape(name) + '=' + 1;
+    $.post(ulr, sdata, function (result2) { console.log(result2) });
+}
+
+function reset_u1() {
+    ulr = 'data.html';
+    name = '"T1_Up"';
+    sdata = escape(name) + '=' + 0;
+    $.post(ulr, sdata, function (result2) { });
+}
+
+function set_u2() {
+    ulr = 'data.html';
+    name = '"Btn_2_Up"';
+    sdata = escape(name) + '=' + 1;
+    $.post(ulr, sdata, function (result2) { console.log(result2) });
+}
+
+function reset_u2() {
+    ulr = 'data.html';
+    name = '"Btn_2_Up"';
+    sdata = escape(name) + '=' + 0;
+    $.post(ulr, sdata, function (result2) { });
+}
+
+function set_u3() {
+    ulr = 'data.html';
+    name = '"Btn_3_Up"';
+    sdata = escape(name) + '=' + 1;
+    $.post(ulr, sdata, function (result2) { console.log(result2) });
+}
+
+function reset_u3() {
+    ulr = 'data.html';
+    name = '"Btn_3_Up"';
+    sdata = escape(name) + '=' + 0;
+    $.post(ulr, sdata, function (result2) { });
+}
+
+function set_d4() {
+    ulr = 'data.html';
+    name = '"Btn_4_Down"';
+    sdata = escape(name) + '=' + 1;
+    $.post(ulr, sdata, function (result2) { console.log(result2) });
+}
+
+function reset_d4() {
+    ulr = 'data.html';
+    name = '"Btn_4_Down"';
+    sdata = escape(name) + '=' + 0;
+    $.post(ulr, sdata, function (result2) { });
+}
+
+function set_d3() {
+    ulr = 'data.html';
+    name = '"Btn_3_Down"';
+    sdata = escape(name) + '=' + 1;
+    $.post(ulr, sdata, function (result2) { console.log(result2) });
+}
+
+function reset_d3() {
+    ulr = 'data.html';
+    name = '"Btn_3_Down"';
+    sdata = escape(name) + '=' + 0;
+    $.post(ulr, sdata, function (result2) { });
+}
+
+function set_d2() {
+    ulr = 'data.html';
+    name = '"Btn_2_Down"';
+    sdata = escape(name) + '=' + 1;
+    $.post(ulr, sdata, function (result2) { console.log(result2) });
+}
+
+function reset_d2() {
+    ulr = 'data.html';
+    name = '"Btn_2_Down"';
+    sdata = escape(name) + '=' + 0;
+    $.post(ulr, sdata, function (result2) { });
+}
+
+function set_1() {
+    ulr = 'data.html';
+    name = '"Btn_1"';
+    sdata = escape(name) + '=' + 1;
+    $.post(ulr, sdata, function (result2) { console.log(result2) });
+}
+
+function reset_1() {
+    ulr = 'data.html';
+    name = '"Btn_1"';
+    sdata = escape(name) + '=' + 0;
+    $.post(ulr, sdata, function (result2) { });
+}
+
+function set_2() {
+    ulr = 'data.html';
+    name = '"Btn_2"';
+    sdata = escape(name) + '=' + 1;
+    $.post(ulr, sdata, function (result2) { console.log(result2) });
+}
+
+function reset_2() {
+    ulr = 'data.html';
+    name = '"Btn_2"';
+    sdata = escape(name) + '=' + 0;
+    $.post(ulr, sdata, function (result2) { });
+}
+
+function set_3() {
+    ulr = 'data.html';
+    name = '"Btn_3"';
+    sdata = escape(name) + '=' + 1;
+    $.post(ulr, sdata, function (result2) { console.log(result2) });
+}
+
+function reset_3() {
+    ulr = 'data.html';
+    name = '"Btn_3"';
+    sdata = escape(name) + '=' + 0;
+    $.post(ulr, sdata, function (result2) { });
+}
+
+function set_4() {
+    ulr = 'data.html';
+    name = '"Btn_4"';
+    sdata = escape(name) + '=' + 1;
+    $.post(ulr, sdata, function (result2) { console.log(result2) });
+}
+
+function reset_4() {
+    ulr = 'data.html';
+    name = '"Btn_4"';
+    sdata= escape(name) + '=' + 0;
+    $.post(ulr, sdata, function (result2) { });
+}
+
+function set_m() {
+    ulr = 'data.html';
+    name = '"Btn_In_Open"';
+    sdata = escape(name) + '=' + 1;
+    $.post(ulr, sdata, function (result2) { console.log(result2) });
+}
+
+function reset_m() {
+    ulr = 'data.html';
+    name = '"Btn_In_Open"';
+    sdata = escape(name) + '=' + 0;
+    $.post(ulr, sdata, function (result2) { });
+}
+
+function set_d() {
+    ulr = 'data.html';
+    name = '"Btn_In_Close"';
+    sdata = escape(name) + '=' + 1;
+    $.post(ulr, sdata, function (result2) { console.log(result2) });
+}
+
+function reset_d() {
+    ulr = 'data.html';
+    name = '"Btn_In_Close"';
+    sdata = escape(name) + '=' + 0;
+    $.post(ulr, sdata, function (result2) { });
+}
